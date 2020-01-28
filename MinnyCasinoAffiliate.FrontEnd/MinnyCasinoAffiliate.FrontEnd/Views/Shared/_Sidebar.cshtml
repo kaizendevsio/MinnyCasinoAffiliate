@@ -1,0 +1,293 @@
+﻿
+
+@model UserVM
+
+<div id="sidebar" class="sidebar">
+    <!-- begin sidebar scrollbar -->
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+        <div data-scrollbar="true" data-height="100%" data-init="true" style="overflow: hidden; width: auto; height: 100%;">
+            <!-- begin sidebar user -->
+            <ul class="nav">
+                <li class="nav-profile">
+                    <a href="javascript:;" data-toggle="nav-profile">
+                        <div class="cover with-shadow"></div>
+                        <div class="image">
+                            <img src="~/img/user.png') }}" alt="">
+
+                        </div>
+                        <div class="info">
+
+                            @Html.DisplayFor(model => model.Username)
+
+                            <small>
+                                @Html.DisplayFor(model => model.Fullname)
+                            </small>
+                            <small>
+                                @Html.DisplayFor(model => model.DateJoined)
+                            </small>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- end sidebar user -->
+            <!-- begin sidebar nav -->
+            <ul class="nav">
+                <li class="nav-header">Navigation</li>
+
+                <li class="has-sub" style="border-bottom: 1px solid #46505a;
+    border-top: 1px solid #46505a;">
+                    <a onclick="location.href='@Url.Action("Index", "Dashboard")'">
+
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    @*<ul class="sub-menu">
+                <li class="has-sub expand active">
+                    <a href="index.html">
+
+                        All Channels
+                    </a>
+                    <ul class="sub-menu" style="display: block;">
+                        <li class="has-sub">
+                            <a href="mini-casino.html">
+                                Mini Casino
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="sub-affiliate.html">
+                                Sub Affiliate
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">News</a></li>
+                <li class="has-sub expand active">
+                    <a href="javascript:;">
+
+                        Open Support Ticket
+                    </a>
+                    <ul class="sub-menu" style="display: block;">
+                        <li class="has-sub">
+                            <a href="javascript:;">
+                                Create Ticket
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">
+                                View all
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-sub expand active">
+                    <a href="javascript:;">
+
+                        Open Support Ticket
+                    </a>
+                </li>
+                <ul class="sub-menu" style="display: block;">
+                    <li class="has-sub">
+                        <a style="color: #fff;">
+                            Account balance : $0
+                        </a>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            Last Payment : $0
+                        </a>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            Set your payment
+                        </a>
+                    </li>
+                </ul>
+
+            </ul>*@
+
+                </li>
+                <li class="has-sub " style="border-bottom: 1px solid #46505a;
+    border-top: 1px solid #46505a;">
+                    <a onclick="location.href='@Url.Action("Index", "Activities")'">
+                        <i class="fa fa-book"></i>
+                        <span>Activities</span>
+                    </a>
+                    @*<ul class="sub-menu">
+                <li class="has-sub active"><a href="statistics.html">Detailed activity report</a></li>
+
+                <li class="has-sub expand ">
+                    <a href="javascript:;">
+
+                        Customer activity
+                    </a>
+                    <ul class="sub-menu" style="display: block;">
+                        <li class="has-sub">
+                            <a href="#">
+                                Customer daily activity
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#">
+                                Customer registrations
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="has-sub expand ">
+                    <a href="javascript:;">
+
+                        Sub-Affiliate Reports
+                    </a>
+                    <ul class="sub-menu" style="display: block;">
+                        <li class="has-sub">
+                            <a href="#">
+                                Sub-affiliate activity
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#">
+                                Sub-affiliate daily
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#">
+                                Sub-affiliate registrations
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-sub expand ">
+                    <a href="javascript:;">
+
+                        Traffic reports
+                    </a>
+                    <ul class="sub-menu" style="display: block;">
+                        <li class="has-sub">
+                            <a href="#">
+                                Hits &amp; impressions report
+
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#">
+                                Media report
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#">
+                                Countries Report
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#">
+                                Referrer report
+
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#">
+                                Hits log
+
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#">
+                                Payload report
+
+
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>*@
+                </li>
+                </li>
+                <li class="has-sub " style="border-bottom: 1px solid #46505a;
+    border-top: 1px solid #46505a;">
+                    <a onclick="location.href='@Url.Action("Index", "Genealogy")'">
+                        <i class="fa fa-book"></i>
+                        <span>Genealogy</span>
+                    </a><link />
+
+                @*<li class="has-sub" style="border-bottom: 1px solid #46505a;
+    border-top: 1px solid #46505a;">
+
+                    <a onclick="location.href='@Url.Action("Index", "Marketing")'">
+
+                        <i class="fa fa-book"></i>
+                        <span>Marketing</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class=""><a href="#">Detailed activity report</a></li>
+                    </ul>
+                </li>*@
+
+
+                @*<li class="has-sub" style="border-bottom: 1px solid #46505a;
+        border-top: 1px solid #46505a;">
+                        <a href="javascript:;">
+
+                            <i class="fa fa-book"></i>
+                            <span>Finances</span>
+                        </a>*@
+                @*<ul class="sub-menu">
+                            <li class="has-sub "><a href="transactions.html">Financial statement</a></li>
+                            <li class="has-sub "><a href="earnings.html">Earnings report</a></li>
+                            <li class="has-sub "><a href="payment-method.html">Payment instructions</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-sub  " style="border-bottom: 1px solid #46505a;
+        border-top: 1px solid #46505a;">
+                        <a href="javascript:;">
+
+                            <i class="fa fa-book"></i>
+                            <span>Account</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="has-sub active"><a href="account.html">Account details</a></li>
+                            <li class="has-sub "><a href="update-account.html">Edit account details</a></li>
+                            <li class="has-sub "><a href="login-history.html">Login history</a></li>
+                            <li class="has-sub expand ">
+                                <a href="javascript:;">
+
+                                    Communications
+                                </a>
+                                <ul class="sub-menu" style="display: block;">
+                                    <li class="has-sub ">
+                                        <a href="news.html">
+                                            News
+                                        </a>
+                                    </li>
+                                    <li class="has-sub ">
+                                        <a href="email-archive.html">
+                                            Email archive
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>*@
+
+
+                @*<li class="has-sub " style="border-bottom: 1px solid #46505a;
+        border-top: 1px solid #46505a;">
+                        <a href="javascript:;">
+
+                            <i class="fa fa-cog"></i>
+                            <span>Support</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class=""><a href="create_ticket.html">Create ticket </a></li>
+                            <li class="has-sub "><a href="unresolve_ticket.html">Unresolve tickets (0)</a></li>
+                            <li class="has-sub "><a href="resolve_ticket.html">Ressolve tickets (0)</a></li>
+                        </ul>
+                    </li>*@
+            </ul>
+            <!-- end sidebar nav -->
+        </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 887px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+    </div>
+    <!-- end sidebar scrollbar -->
+</div>
+<div class="sidebar-bg"></div>

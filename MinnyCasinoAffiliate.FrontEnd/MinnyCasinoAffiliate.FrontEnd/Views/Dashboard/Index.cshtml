@@ -1,0 +1,193 @@
+﻿@{
+    Layout = "~/Views/Shared/_PartialView.cshtml";
+}
+
+
+
+@model DashboardVM
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb float-xl-right">
+        <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+        <li class="breadcrumb-item active">All channels</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">All channels <small> </small></h1>
+    <!-- end page-header -->
+    @*<div class="form-group float-xl-right" style="margin-top: 19px;">
+        <select class="form-control ">
+            <option value="This Month">This Month</option>
+            <option value="Today">Today</option>
+            <option value="Yesterday">Yesterday</option>
+            <option value="This Year">This Year</option>
+        </select>
+    </div>*@
+</div>
+
+<div id="content" class="content">
+    <!-- begin row -->
+    <div class="form-group" style="margin-top: -6px;">
+        <h4 style="padding-top: -0px; line-height:-10;">Static at a Glance</h4>
+    </div>
+    <div class="row">
+        <!-- begin col-3 -->
+        <div class="col-xl-3 col-md-6">
+            <div class="widget widget-stats bg-black">
+                <div class="stats-icon"> </div>
+                <div class="stats-info">
+                    <h4>Total Customers</h4>
+                    <p>
+                        @Html.DisplayFor(model => model.TotalCustomer)
+                    </p>
+                </div>
+                <div class="stats-link">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-xl-3 col-md-6">
+            <div class="widget widget-stats bg-black">
+                <div class="stats-icon"></div>
+                <div class="stats-info">
+                    <h4>Hits</h4>
+                    <p>    @Html.DisplayFor(model => model.TotalHits)</p>
+                </div>
+                <div class="stats-link">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <!-- begin col-3 -->
+        <div class="col-xl-3 col-md-6">
+            <div class="widget widget-stats bg-black">
+                <div class="stats-icon"></div>
+                <div class="stats-info">
+                    <h4>Sign Ups</h4>
+                    <p>    @Html.DisplayFor(model => model.TotalSignUps)</p>
+                </div>
+                <div class="stats-link">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- end col-3 -->
+        <div class="col-xl-3 col-md-6">
+            <div class="widget widget-stats bg-black">
+                <div class="stats-icon"></div>
+                <div class="stats-info">
+                    <h4>First Deposit Counts</h4>
+                    <p>    @Html.DisplayFor(model => model.TotalFirstDeposit)</p>
+                </div>
+                <div class="stats-link">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6">
+            <div class="widget widget-stats bg-black">
+                <div class="stats-icon"></div>
+                <div class="stats-info">
+                    <h4>Income</h4>
+                    <p>    @Html.DisplayFor(model => model.TotalIncome)</p>
+                </div>
+                <div class="stats-link">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @*<div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Hits, impressions & signups</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-primary">
+                        <i class="fa fa-info-circle fa-lg m-r-5 pull-left m-t-2"></i>
+                        No Data
+                    </div>
+                    <a href="#">Hits & impressions report</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Earnings</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-primary">
+                        <i class="fa fa-info-circle fa-lg m-r-5 pull-left m-t-2"></i>
+                        No Data
+                    </div>
+                    <a href="#">Earnings</a> | <a href="#">Financial Reports</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Live visits (all channels)</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-primary">
+                        <i class="fa fa-info-circle fa-lg m-r-5 pull-left m-t-2"></i>
+                        No Data
+                    </div>
+                    <a href="#">View all</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>*@
+    <!-- end panel -->
+</div>
+<!-- end col-4 -->
+    </div>
+<!-- end row -->
+</div>
+@section Scripts{
+ 
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53034621-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+}

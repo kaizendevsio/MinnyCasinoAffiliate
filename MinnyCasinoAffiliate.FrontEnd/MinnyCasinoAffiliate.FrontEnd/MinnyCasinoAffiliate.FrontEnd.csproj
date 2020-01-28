@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework> 
+
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
+  </PropertyGroup>
+ 
+
+  <ItemGroup>
+    <PackageReference Include="angular-ui-grid" Version="4.8.1" />
+    <PackageReference Include="angularjs" Version="1.7.8.1" />
+    <PackageReference Include="AngularJS.Animate" Version="1.7.8" />
+    <PackageReference Include="AngularJS.Core" Version="1.7.8" />
+    <PackageReference Include="AngularJS.Route" Version="1.7.8" />
+    <PackageReference Include="AngularJS.Sanitize" Version="1.7.8" />
+    <PackageReference Include="bootstrap" Version="4.3.1" />
+    <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
+    <PackageReference Include="jQuery" Version="3.4.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.11.2" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="RestSharp.NetCore" Version="105.2.3" />
+    <PackageReference Include="Security.Core.EFCore" Version="1.2.6" />
+    <PackageReference Include="StructureMap.MVC5" Version="3.1.1.134" />
+    <PackageReference Include="structuremap.web" Version="4.0.0.315" />
+    <PackageReference Include="Swashbuckle" Version="5.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="4.6.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.19" />
+    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.6.0" />
+    <PackageReference Include="WebActivatorEx" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MinnyCasinoAffiliate.Wrapper\MinnyCasinoAffiliate.Wrapper.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="MinnyCasinoAffiliate.Api">
+      <HintPath>..\..\MinnyCasinoAffiliate.Api\bin\Debug\netcoreapp3.0\MinnyCasinoAffiliate.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="MinnyCasinoAffiliate.Entities">
+      <HintPath>..\..\MinnyCasinoAffiliate.Entities\bin\Debug\netcoreapp3.0\MinnyCasinoAffiliate.Entities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+ 
+
+</Project>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/backend/unicons.css">
+    <link rel="stylesheet" href="~/backend/bootstrap.min.css">
+    <link rel="stylesheet" href="~/backend/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/orgchart/2.1.9/css/jquery.orgchart.min.css" rel="stylesheet" />
+    @*<link href="~/css/font-awesome.css" rel="stylesheet">*@
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,300,700" rel="stylesheet" id="fontFamilySrc" />
+     
+    <script src="~/js/jquery.slimscroll.min.js"></script>
+    <script src="~/js/js.cookie.js"></script>
+ 
+    <script src="~/js/apps.min.js"></script>
+    @*<script src="~/js/demo.min.js"></script>*@
+    <title>Log In</title>
+</head>
+
+<body style="background-image: url('./images/66.jpg'); background-size: auto;   background-repeat: no-repeat; background-size: cover;
+">
+
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand" href="#"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ml-auto">
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-message">Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @RenderBody()
+    @RenderSection("Scripts", required: false)
+
+    <script src="~/backend/jquery-3.3.1.min.js"></script>
+    <script src="~/backend/popper.min.js"></script>
+    <script src="~/backend/bootstrap.min.js"></script>
+    <script src="~/backend/app.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/orgchart/2.1.9/js/jquery.orgchart.min.js"></script>
+
+    @*<script src="~/js/pace.min.js"></script>*@
+</body>
+
+</html>
+

@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model LogInVM
+<section>
+    <div class="container d-flex h-85">
+        <div class="row center">
+            <div class="col-lg-4 d-lg-flex d-none">
+            </div>
+
+            <div class="col-lg-4 col-md-8 col-sm-12">
+
+                <div class="form-body mb-4 mt-4">
+                    <div class="form-text">
+
+                        <p align="center"><img src="./images/sitelogo.png" alt="holder" align="center"></p>
+                        <h3 align="center" style="color: #fff;"><b>USER LOGIN</b></h3>
+
+                    </div>
+                    <div class="form-content">
+                        <form class="form-horizontal"method="post" onsubmit=" sendFormData('@Url.Action("Login", "Home")','POST',this); return false" >
+                            
+                            <div class="form-group" style="color: #ff5b57">
+                                <label for="username" style="color:#fff;">Username</label>
+                                <div class="input-icon">
+                                    <input type="text" class="form-control" id="username" required="required" autofocus="autofocus" asp-for="Username" name="UserName" placeholder="Enter Username" autofocus>  <i class='fa fa-user'></i>
+                              
+                                </div>
+
+                                <span class="help-block">
+                                    <strong></strong>
+                                </span>
+
+                            </div>
+                            <div class="form-group" style="color: #ff5b57;">
+                                <label for="password" style="color:#fff;">Password</label>
+                                <div class="input-icon">
+                                    <input type="password" class="form-control" id="password" name="PasswordString" asp-for="PasswordString" placeholder="Enter Password" s> <i class='fa fa-key'></i>
+                                </div>
+                                <table class="">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" name="" checked=""> </th>
+                                            <th><small style="color: #fff;">Remember me </small> </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="d-flex">
+                                <button type="submit" value="Login" class="btn  btn-success  btn-primary btn-block">Login</button>
+                             
+                            </div>
+                        </form>
+
+                    </div>
+                    <br>
+
+                    <p style="color: #fff;"><a onclick="location.href='@Url.Action("SignUp", "Home")'" style="color: #fff;s">Sign Up</a><a href="#forgot" style="color: #fff; float: right;">Forgot Password</a></small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

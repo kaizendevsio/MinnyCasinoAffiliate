@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MinnyCasinoAffiliate.DataAccessLayer\MinnyCasinoAffiliate.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\MinnyCasinoAffiliate.Entities\MinnyCasinoAffiliate.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

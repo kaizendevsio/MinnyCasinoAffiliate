@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_PartialView.cshtml";
+}
+
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <!-- end breadcrumb -->
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+
+                        </div>
+                        <div class="panel-body">
+
+                            <h3 style="padding-top:7px; padding-bottom: 7px">Genealogy</h3>
+                            <div id="chart-container"></div>
+                        </div>
+                    </div>
+                </div>
+                @section Scripts{
+
+                    <script type="text/javascript">
+
+                        var datascource = {
+                            'name': 'You',
+                            'title': 'Admin',
+                            'children': [
+                                { 'name': 'Left', 'title': 'Vacant Position' },
+                                { 'name': 'Right', 'title': 'Vacant Position' }
+                            ]
+                        };
+
+                        //$('#chart-container').orgchart({
+                        //    'data': datascource,
+                        //    'nodeContent': 'title',
+                        //    'toggleSiblingsResp': true
+                        //});
+                        var oc = $('#chart-container').orgchart({
+                            'data': datascource,
+                            'nodeContent': 'title',
+                            'pan': true,
+                            'zoom': true
+                        });
+
+                        $('#togglePan').on('click', function () {
+                            // of course, oc.setOptions({ 'pan': this.checked }); is also OK.
+                            oc.setOptions('pan', this.checked);
+                        });
+
+                        $('#toggleZoom').on('click', function () {
+                            // of course, oc.setOptions({ 'zoom': this.checked }); is also OK.
+                            oc.setOptions('zoom', this.checked);
+                        });
+
+                    </script>
+                }
